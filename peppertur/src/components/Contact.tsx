@@ -77,7 +77,22 @@ export const Contact = forwardRef<HTMLDivElement, {}>((_props, ref) => {
           </form>
         </div>
       </section>
-      <ToastContainer />
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        style={{
+          maxWidth: '90%',
+          fontSize: '14px',
+        }}
+      />
     </>
   );
 });

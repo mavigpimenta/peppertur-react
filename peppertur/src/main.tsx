@@ -9,6 +9,21 @@ import { Page } from './Page.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Page/>
-    <ToastContainer />  
+    <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        style={{
+          maxWidth: '90%',
+          fontSize: '14px',
+        }}
+      /> 
   </StrictMode>,
 )
