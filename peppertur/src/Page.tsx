@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
@@ -6,26 +6,27 @@ import { Navbar } from "./components/Navbar";
 import { Services } from "./components/Services";
 import { WhoAre } from "./components/WhoAre";
 
-export const Page = () => {
-    const contactRef = useRef(null);
-    const whoAreRef = useRef(null);
-    const homeRef = useRef(null);
-    const servicesRef = useRef(null);
+export const Page: React.FC = () => {
+    
+    const contactRef = useRef<HTMLDivElement>(null);
+    const whoAreRef = useRef<HTMLOptionElement>(null);
+    const homeRef = useRef<HTMLDivElement>(null);
+    const servicesRef = useRef<HTMLDivElement>(null);
 
-    const handleNavClick = (event, section) => {
+    const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, section: string) => {
         event.preventDefault();
         switch(section) {
             case 'contact':
-                contactRef.current.scrollIntoView({ behavior: 'smooth' });
+                contactRef.current?.scrollIntoView({ behavior: 'smooth' });
                 break;
             case 'whoare':
-                whoAreRef.current.scrollIntoView({ behavior: 'smooth' });
+                whoAreRef.current?.scrollIntoView({ behavior: 'smooth' });
                 break;
             case 'home':
-                homeRef.current.scrollIntoView({ behavior: 'smooth' });
+                homeRef.current?.scrollIntoView({ behavior: 'smooth' });
                 break;
             case 'services':
-                servicesRef.current.scrollIntoView({ behavior: 'smooth' });
+                servicesRef.current?.scrollIntoView({ behavior: 'smooth' });
                 break;
             default:
                 break;
@@ -35,7 +36,7 @@ export const Page = () => {
     return (
         <>
             <Navbar handleNavClick={handleNavClick} />
-            <Home ref={homeRef} handleNavClick={handleNavClick}/>
+            <Home ref={homeRef} handleNavClick={handleNavClick} />
             <Services ref={servicesRef} />
             <WhoAre ref={whoAreRef} />
             <Contact ref={contactRef} />

@@ -1,6 +1,9 @@
 import React from 'react';
 
-export const WhoAre = React.forwardRef((props, ref) => {
+// Definindo o tipo das propriedades esperadas
+interface WhoAreProps {}
+
+export const WhoAre = React.forwardRef<HTMLOptionElement, WhoAreProps>((_props, ref) => {
   return (
     <>
         <section ref={ref} id='whoare' className="py-12 px-6 sm:px-10 lg:px-16 bg-gray-100">
@@ -54,5 +57,3 @@ export const WhoAre = React.forwardRef((props, ref) => {
     </>
   );
 });
-
-

@@ -1,6 +1,9 @@
 import React from 'react';
 
-export const Services = React.forwardRef((props, ref) => {
+// Definindo o tipo das propriedades esperadas
+interface ServicesProps {}
+
+export const Services = React.forwardRef<HTMLDivElement, ServicesProps>((_props, ref) => {
   return (
     <>
         <section ref={ref} id='services' className="py-12 px-6 sm:px-10 lg:px-16 bg-gray-100">

@@ -1,9 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Logo from "/logo.png";
-import { FaBars } from "react-icons/fa"; 
+import { FaBars } from "react-icons/fa";
 
-export const Navbar = ({ handleNavClick }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface NavbarProps {
+    handleNavClick: (event: React.MouseEvent<HTMLAnchorElement>, section: string) => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ handleNavClick }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -37,7 +41,7 @@ export const Navbar = ({ handleNavClick }) => {
             </div>
             {isMenuOpen && (
                 <div className="md:hidden mt-4 space-y-2">
-                    <a href="#home" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={ (e) => handleNavClick(e, 'home')}>
+                    <a href="#home" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={(e) => handleNavClick(e, 'home')}>
                         Home
                     </a>
                     <a href="#services" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={(e) => handleNavClick(e, 'services')}>

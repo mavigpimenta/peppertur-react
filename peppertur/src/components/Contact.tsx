@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-export const Contact = React.forwardRef((props, ref) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+export const Contact = forwardRef<HTMLDivElement, {}>((_props, ref) => {
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     const templateParams = {
@@ -39,7 +38,7 @@ export const Contact = React.forwardRef((props, ref) => {
 
   return (
     <>
-      <section ref={ref} id="contact" className="py-16 bg-gray-100">
+      <section ref={ref} id="contato" className="py-16 bg-gray-100">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center relative">
           Contato
         </h1>
@@ -77,8 +76,8 @@ export const Contact = React.forwardRef((props, ref) => {
             </button>
           </form>
         </div>
-        <ToastContainer />
       </section>
+      <ToastContainer />
     </>
   );
 });
