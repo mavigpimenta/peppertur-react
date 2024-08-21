@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Definindo o tipo das propriedades esperadas
 interface ServicesProps {}
 
 export const Services = React.forwardRef<HTMLDivElement, ServicesProps>((_props, ref) => {

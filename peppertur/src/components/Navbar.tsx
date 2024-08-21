@@ -14,22 +14,22 @@ export const Navbar: React.FC<NavbarProps> = ({ handleNavClick }) => {
     };
 
     return (
-        <nav className="bg-white p-4 shadow-lg z-10 fixed w-full">
+        <nav className="bg-white p-4 shadow-lg fixed w-full top-0 left-0 z-30">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center">
                     <img src={Logo} alt="Logo" className="h-10 mr-4"/>
                 </div>
                 <div className="hidden md:flex space-x-4">
-                    <a href="#home" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold x" onClick={(e) => handleNavClick(e, 'home')}>
+                    <a href="#home" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold" onClick={(e) => handleNavClick(e, 'home')}>
                         Home
                     </a>
-                    <a href="#services" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold x" onClick={(e) => handleNavClick(e, 'services')}>
+                    <a href="#services" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold" onClick={(e) => handleNavClick(e, 'services')}>
                         Serviços
                     </a>
-                    <a href="#whoare" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold x" onClick={(e) => handleNavClick(e, 'whoare')}>
+                    <a href="#whoare" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold" onClick={(e) => handleNavClick(e, 'whoare')}>
                         Quem Somos?
                     </a>
-                    <a href="#contact" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold x" onClick={(e) => handleNavClick(e, 'contact')}>
+                    <a href="#contact" className="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-base font-semibold" onClick={(e) => handleNavClick(e, 'contact')}>
                         Contato
                     </a>
                 </div>
@@ -40,17 +40,17 @@ export const Navbar: React.FC<NavbarProps> = ({ handleNavClick }) => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="md:hidden mt-4 space-y-2">
-                    <a href="#home" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={(e) => handleNavClick(e, 'home')}>
+                <div className="md:hidden mt-4 space-y-2 z-50">
+                    <a href="#home" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold" onClick={(e) => handleNavClick(e, 'home')}>
                         Home
                     </a>
-                    <a href="#services" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={(e) => handleNavClick(e, 'services')}>
+                    <a href="#services" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold" onClick={(e) => handleNavClick(e, 'services')}>
                         Serviços
                     </a>
-                    <a href="#whoare" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={(e) => handleNavClick(e, 'whoare')}>
+                    <a href="#whoare" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold" onClick={(e) => handleNavClick(e, 'whoare')}>
                         Quem Somos?
                     </a>
-                    <a href="#contact" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold x" onClick={(e) => handleNavClick(e, 'contact')}>
+                    <a href="#contact" className="block text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-semibold" onClick={(e) => handleNavClick(e, 'contact')}>
                         Contato
                     </a>
                 </div>

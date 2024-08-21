@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Definindo o tipo das propriedades esperadas
 interface WhoAreProps {}
 
 export const WhoAre = React.forwardRef<HTMLOptionElement, WhoAreProps>((_props, ref) => {
