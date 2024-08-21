@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Contact = forwardRef<HTMLDivElement, {}>((_props, ref) => {
   const [name, setName] = useState<string>('');
