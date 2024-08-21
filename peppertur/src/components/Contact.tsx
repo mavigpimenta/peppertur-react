@@ -75,13 +75,6 @@ export const Contact = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             >
               Enviar Mensagem
             </button>
-            <button
-              type="submit"
-              className="bg-red-600 text-white p-3 rounded-lg w-full font-semibold hover:bg-red-700 transition-colors"
-              onClick={() => toast.success("UHUL")}
-            >
-              Enviar 
-            </button>
           </form>
         </div>
       </section>
